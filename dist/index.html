@@ -1,81 +1,15 @@
-Html Webpack Plugin:
-<pre>
-  TypeError: compilation.templatesPlugin is not a function
-  
-  - SetVarMainTemplatePlugin.js:17 SetVarMainTemplatePlugin.apply
-    [lib]/[webpack]/lib/SetVarMainTemplatePlugin.js:17:15
-  
-  - Tapable.js:71 Compilation.apply
-    [lib]/[webpack]/[tapable]/lib/Tapable.js:71:16
-  
-  - util.js:60 Compilation.deprecated [as apply]
-    internal/util.js:60:15
-  
-  - LibraryTemplatePlugin.js:40 compiler.plugin
-    [lib]/[webpack]/lib/LibraryTemplatePlugin.js:40:18
-  
-  
-  - Hook.js:35 SyncHook.lazyCompileHook [as _call]
-    [lib]/[webpack]/[tapable]/lib/Hook.js:35:21
-  
-  - Compiler.js:503 Compiler.newCompilation
-    [lib]/[webpack]/lib/Compiler.js:503:30
-  
-  - Compiler.js:540 hooks.beforeCompile.callAsync.err
-    [lib]/[webpack]/lib/Compiler.js:540:29
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [lib]/[webpack]/[tapable]/lib/Hook.js:35:21
-  
-  - Compiler.js:535 Compiler.compile
-    [lib]/[webpack]/lib/Compiler.js:535:28
-  
-  - Compiler.js:281 Compiler.runAsChild
-    [lib]/[webpack]/lib/Compiler.js:281:8
-  
-  - compiler.js:75 Promise
-    [webpack_demo]/[html-webpack-plugin]/lib/compiler.js:75:19
-  
-  - compiler.js:74 Object.compileTemplate
-    [webpack_demo]/[html-webpack-plugin]/lib/compiler.js:74:10
-  
-  - index.js:71 
-    [webpack_demo]/[html-webpack-plugin]/index.js:71:42
-  
-  
-  - Hook.js:35 AsyncParallelHook.lazyCompileHook [as _callAsync]
-    [lib]/[webpack]/[tapable]/lib/Hook.js:35:21
-  
-  - Compiler.js:542 hooks.beforeCompile.callAsync.err
-    [lib]/[webpack]/lib/Compiler.js:542:20
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [lib]/[webpack]/[tapable]/lib/Hook.js:35:21
-  
-  - Compiler.js:535 Compiler.compile
-    [lib]/[webpack]/lib/Compiler.js:535:28
-  
-  - Compiler.js:274 readRecords.err
-    [lib]/[webpack]/lib/Compiler.js:274:11
-  
-  - Compiler.js:402 Compiler.readRecords
-    [lib]/[webpack]/lib/Compiler.js:402:11
-  
-  - Compiler.js:271 hooks.run.callAsync.err
-    [lib]/[webpack]/lib/Compiler.js:271:10
-  
-  
-  - CachePlugin.js:52 compiler.hooks.run.tapAsync
-    [lib]/[webpack]/lib/CachePlugin.js:52:13
-  
-  
-  - Hook.js:35 AsyncSeriesHook.lazyCompileHook [as _callAsync]
-    [lib]/[webpack]/[tapable]/lib/Hook.js:35:21
-  
-  - Compiler.js:268 hooks.beforeRun.callAsync.err
-    [lib]/[webpack]/lib/Compiler.js:268:19
-  
-  
-</pre><script type=text/javascript src=bundle.js?43f040c12a849fff1ad3></script>
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset=utf-8>
+        <title>Webpack Sample Project</title>
+    <link href=http://localhost:8888/main.css?cbf3b087eb0acce59120 rel=stylesheet></head>
+    <body>
+        <div id=app>
+            
+        </div>
+        <div class=image-box></div>
+        <!-- <script src="bundle.js"></script> -->
+    <script type=text/javascript src=http://localhost:8888/bundle.js?cbf3b087eb0acce59120></script></body>
+</html>
