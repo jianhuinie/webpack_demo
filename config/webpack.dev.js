@@ -11,14 +11,18 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: {
-        main: './src/main.js'
-    },
+    // entry: {
+    //     main: './src/main.jsx'
+    // },
+    entry: ['babel-polyfill', './src/main.jsx'],
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'bundle.js',
-        publicPath: "http://localhost:8888/"
+        filename: 'bundle.js'
+        // publicPath: "http://localhost:8888/"
     },
+    resolve: {
+        extensions: ['.js', '.jsx'],
+      },
     module: {
         rules: [
             {
@@ -72,7 +76,7 @@ module.exports = {
             template: './src/index.html'
            
         }),
-        new uglify(),
+        // new uglify(),
         new webpack.HotModuleReplacementPlugin(),
         new MiniCssExtractPlugin({
             filename: '[name].css',
